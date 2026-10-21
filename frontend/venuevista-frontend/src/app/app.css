@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f8fc;
+  color: #171717;
+}
+
+.navbar {
+  height: 70px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  color: #6c35de;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  color: #6c35de;
+}
+
+.login-btn,
+.primary-btn,
+.secondary-btn,
+.book-btn,
+.view-btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.login-btn {
+  padding: 11px 22px;
+  background: #6c35de;
+  color: white;
+}
+
+.hero {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  padding: 70px 7%;
+  background: linear-gradient(135deg, #171329, #43258a);
+  color: white;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.tagline,
+.section-tag,
+.event-category {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #a987ff;
+}
+
+.hero h1 {
+  font-size: 60px;
+  line-height: 1.05;
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: #b895ff;
+}
+
+.hero-text {
+  font-size: 19px;
+  line-height: 1.6;
+  color: #dddddd;
+  max-width: 600px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.primary-btn {
+  padding: 14px 25px;
+  background: #7b42e8;
+  color: white;
+}
+
+.secondary-btn {
+  padding: 14px 25px;
+  background: white;
+  color: #5425a9;
+}
+
+.events-section {
+  padding: 75px 7%;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.section-heading h2,
+.recommendation-section h2 {
+  font-size: 36px;
+  margin-top: 8px;
+}
+
+.view-btn {
+  padding: 12px 20px;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.event-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.event-image {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+}
+
+.movie {
+  background: #ddd6fe;
+}
+
+.concert {
+  background: #fbcfe8;
+}
+
+.sports {
+  background: #bfdbfe;
+}
+
+.event-info {
+  padding: 22px;
+}
+
+.event-category {
+  color: #6c35de;
+}
+
+.event-info h3 {
+  font-size: 21px;
+  margin: 10px 0;
+}
+
+.event-info p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.book-btn {
+  padding: 11px 18px;
+  background: #6c35de;
+  color: white;
+}
+
+.recommendation-section {
+  margin: 20px 7% 80px;
+  padding: 55px;
+  border-radius: 20px;
+  background: #eee8ff;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.recommendation-section > div:first-child {
+  max-width: 650px;
+}
+
+.recommendation-section p {
+  color: #555;
+  line-height: 1.6;
+  margin: 15px 0 25px;
+}
+
+.ai-box {
+  min-width: 280px;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.ai-icon {
+  font-size: 45px;
+  color: #7b42e8;
+  margin-bottom: 15px;
+}
+
+footer {
+  padding: 35px 7%;
+  background: #171329;
+  color: white;
+  text-align: center;
+}
+
+footer p {
+  margin-top: 10px;
+  color: #bbb;
+}
+
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-section {
+    flex-direction: column;
+  }
+}

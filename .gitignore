@@ -1,0 +1,21 @@
+# Angular dependencies and builds
+**/node_modules/
+**/dist/
+**/.angular/
+
+# Java and Maven builds
+**/target/
+*.class
+
+# IDE files
+.metadata/
+.settings/
+.project
+.classpath
+*.iml
+
+# Secrets
+.env
+.env.*
+!.env.example
+application-local.properties

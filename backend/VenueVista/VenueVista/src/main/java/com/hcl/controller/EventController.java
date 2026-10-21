@@ -1,0 +1,51 @@
+package com.hcl.controller;
+
+import java.util.List;
+import org.springframework.web.bind.annotation.*;
+import com.hcl.model.Event;
+import com.hcl.service.EventService;
+
+@RestController
+@RequestMapping("/events")
+public class EventController {
+
+    private final EventService eventService;
+
+    public EventController(EventService eventService) {
+        this.eventService = eventService;
+    }
+
+    @PostMapping
+    public Event createEvent(@RequestBody Event event) {
+        return eventService.saveEvent(event);
+    }
+
+    @GetMapping
+    public List<Event> getAllEvents() {
+        return eventService.getAllEvents();
+    }
+
+    @GetMapping("/{id}")
+    public Event getEventById(@PathVariable Long id) {
+        return eventService.getEventById(id);
+    }
+
+    @PutMapping("/{id}")
+    public Event updateEvent(@PathVariable Long id, @RequestBody Event event) {
+        Event existingEvent = eventService.getEventById(id);
+
+        if (existingEvent == null) {
+            return null;
+        }
+
+        existingEvent.setName(event.getName());
+        existingEvent.setDescription(event.getDescription());
+
+        return eventService.saveEvent(existingEvent);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteEvent(@PathVariable Long id) {
+        eventService.deleteEvent(id);
+    }
+}
