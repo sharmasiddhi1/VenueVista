@@ -1,7 +1,5 @@
-
-<nav class="navbar">
+﻿<nav class="navbar">
   <div class="logo">VenueVista</div>
-
   <div class="nav-links">
     <a href="#">Home</a>
     <a href="#events">Events</a>
@@ -9,20 +7,14 @@
     <a href="#tickets">Tickets</a>
     <a href="#recommendations">Recommendations</a>
   </div>
-
   <button class="login-btn">Login</button>
 </nav>
 
 <section class="hero">
   <div class="hero-content">
     <p class="tagline">EVENTS • VENUES • EXPERIENCES</p>
-
     <h1>Find Your Next<br><span>Unforgettable Event</span></h1>
-
-    <p class="hero-text">
-      Discover events, choose your seats and book your tickets easily with VenueVista.
-    </p>
-
+    <p class="hero-text">Discover events, choose your seats and book your tickets easily with VenueVista.</p>
     <div class="hero-buttons">
       <button class="primary-btn">Explore Events</button>
       <button class="secondary-btn">View Venues</button>
@@ -36,7 +28,6 @@
       <p class="section-tag">DISCOVER</p>
       <h2>Featured Events</h2>
     </div>
-
     <button class="view-btn">View All Events →</button>
   </div>
 
@@ -44,38 +35,16 @@
     @for (event of events; track event.id) {
       <div class="event-card">
         <div class="event-image movie">🎬</div>
-
         <div class="event-info">
           <p class="event-category">EVENT</p>
           <h3>{{ event.name }}</h3>
-          <p>{{ event.description }}</p>
-
+          <p>{{ event.description || 'Discover this event on VenueVista.' }}</p>
           <button class="book-btn">Book Tickets</button>
         </div>
       </div>
+    } @empty {
+      <p>No events available right now.</p>
     }
-  </div>
-    }
-  </div>
-    <div class="event-card">
-      <div class="event-image concert">🎵</div>
-      <div class="event-info">
-        <p class="event-category">CONCERT</p>
-        <h3>Live Music Night</h3>
-        <p>📍 Grand Arena, Delhi</p>
-        <button class="book-btn">Book Tickets</button>
-      </div>
-    </div>
-
-    <div class="event-card">
-      <div class="event-image sports">🏆</div>
-      <div class="event-info">
-        <p class="event-category">SPORTS</p>
-        <h3>Championship Finals</h3>
-        <p>📍 City Stadium, Delhi</p>
-        <button class="book-btn">Book Tickets</button>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -83,13 +52,9 @@
   <div>
     <p class="section-tag">SMART RECOMMENDATIONS</p>
     <h2>Events picked for you</h2>
-    <p>
-      Our AI-based recommendation system helps users discover events
-      based on their interests, previous bookings, location and price range.
-    </p>
+    <p>Our AI-based recommendation system helps users discover events based on their interests, previous bookings, location and price range.</p>
     <button class="primary-btn">Get Recommendations</button>
   </div>
-
   <div class="ai-box">
     <div class="ai-icon">✦</div>
     <h3>AI Event Recommendations</h3>
@@ -99,5 +64,5 @@
 
 <footer>
   <div class="logo">VenueVista</div>
-  <p>Event Ticketing & Venue Management</p>
+  <p>Event Ticketing &amp; Venue Management</p>
 </footer>
